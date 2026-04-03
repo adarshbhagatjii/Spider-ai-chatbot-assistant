@@ -3,8 +3,6 @@
 # ================================
 
 import streamlit as st
-import os
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -25,8 +23,8 @@ st.set_page_config(
 # ENVIRONMENT SETUP 
 # ================================
 
-load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+
+api_key = st.secrets["GROQ_API_KEY"]
 
 if not api_key:
     st.error("❌ API_KEY missing.")
@@ -35,7 +33,7 @@ if not api_key:
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
     temperature=0,
-    groq_api_key=st.secrets("GROQ_API_KEY")
+    groq_api_key=api_key
 )
 
 
