@@ -7,7 +7,7 @@ It dynamically adapts its behavior based on user-selected roles like **Teacher, 
 
 ## 📌 Live Demo
 
-🔗 **Live Demo:** [spider-ai-chatbot-assistantr](https://spider-ai-chatbot-assistant.streamlit.app/))
+🔗 **Live Demo:** [spider-ai-chatbot-assistant](https://spider-ai-chatbot-assistant.streamlit.app/)
 
 ---
 
